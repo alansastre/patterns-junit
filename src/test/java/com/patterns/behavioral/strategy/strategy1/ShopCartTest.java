@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class ShopCartTest {
+class ShopCartTest {
 
     @BeforeEach
     void setUp() {
@@ -18,7 +18,7 @@ public class ShopCartTest {
 
     @Test
     @DisplayName("TestNotNull")
-    public void testNotNull()
+    void testNotNull()
     {
         ShopCart trolley = new ShopCart();
         assertNotNull(trolley);

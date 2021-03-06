@@ -15,7 +15,7 @@ import java.util.Optional;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
-public class BookShopMockitoTest {
+class BookShopMockitoTest {
 
 
     // dependencia
@@ -30,7 +30,7 @@ public class BookShopMockitoTest {
 
     @Test
     @DisplayName("Check retrieve one book")
-    public void testName() {
+    void testName() {
 
         Book normalBook = new Book("ssdsd","sdad",12);
         when(book.getIsbn()).thenReturn("12345");

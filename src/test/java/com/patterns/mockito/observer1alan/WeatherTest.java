@@ -18,7 +18,7 @@ import java.util.List;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
-public class WeatherTest {
+class WeatherTest {
 
 
     // captors:
@@ -35,7 +35,7 @@ public class WeatherTest {
 
     @Test
     @DisplayName("Change weather addObserver")
-    public void changeWeather() {
+    void changeWeather() {
 
         weather.addObserver(observer);
         weather.changeWeather(WeatherType.RAINY);
@@ -48,7 +48,7 @@ public class WeatherTest {
 
     @Test
     @DisplayName("Change weather addObserver")
-    public void changeWeather2() {
+    void changeWeather2() {
 
         weather.addObserver(observer);
         weather.changeWeather(WeatherType.RAINY);
@@ -62,7 +62,7 @@ public class WeatherTest {
 
     @Test
     @DisplayName("Change weather addObserver")
-    public void changeWeather3() {
+    void changeWeather3() {
 
         weather.addObserver(observer);
         weather.changeWeather(WeatherType.RAINY);
@@ -79,7 +79,7 @@ public class WeatherTest {
 
     @Test
     @DisplayName("Change weather 4")
-    public void changeWeather4() {
+    void changeWeather4() {
         weather.addObserver(observer);
         weather.changeWeather(WeatherType.RAINY);
 
@@ -90,7 +90,7 @@ public class WeatherTest {
 
     @Test
     @DisplayName("Change Weather 5")
-    public void changeWeather5() {
+    void changeWeather5() {
         weather.addObserver(observer);
         weather.changeWeather(WeatherType.RAINY);
         verify(observer).update(argThat(weatherType -> weatherType == WeatherType.RAINY));
@@ -99,7 +99,7 @@ public class WeatherTest {
 
     @Test
     @DisplayName("Change weather removeObserver")
-    public void changeWeatherRemoveObserver() {
+    void changeWeatherRemoveObserver() {
         weather.removeObserver(observer);
         weather.changeWeather(WeatherType.RAINY);
 

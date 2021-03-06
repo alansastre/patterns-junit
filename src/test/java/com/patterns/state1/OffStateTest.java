@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @DisplayName("offState")
-public class OffStateTest {
+class OffStateTest {
 
     @Test
     @DisplayName("offStatenotNull")

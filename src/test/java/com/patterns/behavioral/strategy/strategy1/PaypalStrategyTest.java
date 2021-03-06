@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class PaypalStrategyTest {
+class PaypalStrategyTest {
 
     @Test
     @DisplayName("Check paypal instanceof PaymenyStrategy")

@@ -25,7 +25,7 @@ class DBConfigurationMockitoTest {
 
     @Test
     @DisplayName("TestSingletonMockito")
-    public void testSingletonMockito() {
+    void testSingletonMockito() {
 
         when(config1.getUrl()).thenReturn(
                 "jdbc:mariadb://locahost:65999"

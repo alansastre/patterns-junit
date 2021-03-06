@@ -8,7 +8,7 @@ class MainTest {
 
     @Test
     @DisplayName("carnotNull")
-    public void carnotNull() {
+    void carnotNull() {
         Car car = new Car();
         assertNotNull(car);
 

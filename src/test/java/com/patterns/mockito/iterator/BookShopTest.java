@@ -37,7 +37,7 @@ class BookShopTest {
 
     @Test
     @DisplayName("addBook")
-    public void addBook() {
+    void addBook() {
 
         Book bookToAdd = new Book("5656435", "Hawkins", 2021 );
 
@@ -53,7 +53,7 @@ class BookShopTest {
 
     @Test
     @DisplayName("addBookNull")
-    public void addBookNull() {
+    void addBookNull() {
 
         Book book = new Book("5656435", "Hawkins", 2021 );
 

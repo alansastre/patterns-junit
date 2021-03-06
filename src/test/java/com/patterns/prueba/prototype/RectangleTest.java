@@ -6,7 +6,7 @@ import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 @DisplayName("Test Rectangle")
-public class RectangleTest {
+class RectangleTest {
 
     @Test
     @DisplayName("InstanceOf")

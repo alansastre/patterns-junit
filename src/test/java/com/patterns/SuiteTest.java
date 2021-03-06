@@ -1,6 +1,6 @@
 package com.patterns;
 
-import com.patterns.behavioral.strategy.strategy1.PaypalStrategyTest;
+
 import junit.framework.TestSuite;
 import org.junit.Test;
 import org.junit.platform.runner.JUnitPlatform;
