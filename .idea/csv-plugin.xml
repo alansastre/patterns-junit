@@ -10,6 +10,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/src/main/java/com/patterns/behavioral/strategy/strategy1/ShopCart.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/src/main/java/mockito/iterator/iterator1/BookShop.java">
           <value>
             <Attribute>
@@ -18,6 +25,13 @@
           </value>
         </entry>
         <entry key="/src/test/java/com/patterns/behavioral/iterator/iterator1/BookShopTest.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/src/test/java/com/patterns/behavioral/observer/observer1/WeatherTest.java">
           <value>
             <Attribute>
               <option name="separator" value=";" />

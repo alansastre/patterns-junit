@@ -29,6 +29,12 @@ public class ShopCart {
         paymentMethod.pay(amount);
     }
 
+    public List<Product> getProducts() {
+        return products;
+    }
 
-
+    public ShopCart setProducts(List<Product> products) {
+        this.products = products;
+        return this;
+    }
 }

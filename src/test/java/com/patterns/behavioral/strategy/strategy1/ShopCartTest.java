@@ -13,5 +13,15 @@ public class ShopCartTest {
         ShopCart trolley = new ShopCart();
     }
 
+    @Test
+    @DisplayName("addProduct")
+    public void addProduct() {
+
+        Product product = new Product("adlkfjs", 20D);
+        ShopCart trolley = new ShopCart();
+        trolley.addProduct(product);
+        assertEquals(1, trolley.getProducts().size());
+
+    }
 
 }

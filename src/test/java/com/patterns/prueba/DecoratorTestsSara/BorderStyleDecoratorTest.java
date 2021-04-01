@@ -11,14 +11,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class BorderStyleDecoratorTest {
 
     @Test
-    void draw() {
-    }
-
-    @Test
-    void resize() {
-    }
-
-    @Test
     void description() {
         Shape circulo = new Circle();
         String style ="sólido";

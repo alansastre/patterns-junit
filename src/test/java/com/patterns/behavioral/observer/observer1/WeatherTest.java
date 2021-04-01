@@ -3,17 +3,36 @@ package com.patterns.behavioral.observer.observer1;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.ArgumentCaptor;
+import org.mockito.Captor;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.verify;
 
+@ExtendWith(MockitoExtension.class)
 class WeatherTest {
     private WeatherType currentWeather;
     private List<WeatherObserver> observers;
 
-    @Test
+    // captors:
+    @Captor
+    ArgumentCaptor<WeatherType> weatherTypeCaptor;
+
+    // dependencias
+    @Mock
+    WeatherObserver observer;
+
+    // SUT - dependiente
+    @InjectMocks
+    Weather weather;
+
     @BeforeEach
     void comienzo(){
         System.out.println("comienzo");
@@ -72,11 +91,13 @@ class WeatherTest {
     @Test
     @DisplayName("cambiar el tiempo")//parametros
     void changeWeather() {
-        WeatherType type = WeatherType.RAINY;
-        WeatherObserver computer = new Computer();
-        computer.update(type);
 
+        weather.addObserver(observer);
+        weather.changeWeather(WeatherType.RAINY);
 
+        ArgumentCaptor<WeatherType> argumentCaptor = ArgumentCaptor.forClass(WeatherType.class);
+        verify(observer).update(argumentCaptor.capture());
+        assertEquals(WeatherType.RAINY, argumentCaptor.getValue());
 
     }
 }

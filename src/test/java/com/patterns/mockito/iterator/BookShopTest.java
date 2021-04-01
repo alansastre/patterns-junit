@@ -1,8 +1,8 @@
 package com.patterns.mockito.iterator;
 
-import com.patterns.behavioral.iterator.iterator1.CustomIterator;
 import mockito.iterator.iterator1.Book;
 import mockito.iterator.iterator1.BookShop;
+import mockito.iterator.iterator1.CustomIterator;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -12,9 +12,6 @@ import org.mockito.Captor;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-
-import java.util.Arrays;
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
@@ -55,10 +52,12 @@ class BookShopTest {
     @DisplayName("addBookNull")
     public void addBookNull() {
 
-        book = null;
-       // verify(bookShop).addBook(bookArgumentCaptor.capture());
 
-        //assertEquals(null, bookArgumentCaptor.getValue());
+        int totalBooksBefore = bookShop.getSize();
+
+        bookShop.addBook(null);
+
+        assertEquals(totalBooksBefore, bookShop.getSize());
 
     }
 
@@ -101,25 +100,26 @@ class BookShopTest {
     @Test
     @DisplayName("iterator")
     void iterator() {
-/*
-        // 1 Configurar mocks
-      //  when(bookShop.iterator()).thenReturn(CustomIterator iterator);
 
-        // 2 - Probar el SUT
-        assertTrue(bookShop.iterator() instanceof CustomIterator);
+        BookShop books = new BookShop();
 
-        // 3 - Verificar datos y mock
-        verify(bookShop, times(1)).iterator();
+        assertNotNull(books.iterator());
 
- */
     }
 
     @Test
     @DisplayName("iteratorHasNext")
     public void iteratorHasNext() {
 
+    Book book1 = new Book("5656435", "Hawkins", 2021 );
 
+        BookShop books = new BookShop();
 
+        books.addBook(book1);
+
+        CustomIterator iterador = books.iterator();
+
+        assertTrue(iterador.hasNext());
 
     }
 }
