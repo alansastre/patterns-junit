@@ -5,6 +5,7 @@ import com.patterns.behavioral.state.state1.State;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @DisplayName("OnState")
@@ -16,7 +17,7 @@ public class OnStateTest {
     @DisplayName("onStatenotNull")
     void onStatenotNull()  {
         State start = new OnState();
-        assertTrue(start!= null);
+        assertNotNull(start);
     }
     @Test
     @DisplayName("onStateisOnState")

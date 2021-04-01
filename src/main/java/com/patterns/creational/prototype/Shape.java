@@ -5,8 +5,8 @@ public abstract class Shape implements  Cloneable{
     private String color;
 
     // Constructores
-    public Shape(){}
-    public Shape(String color){
+    protected Shape(){}
+    protected Shape(String color){
         this.color= color;
     }
 

@@ -1,6 +1,11 @@
 package mockito.iterator.iterator1;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class Main {
+
+    private static final Logger log = LoggerFactory.getLogger(Main.class);
 
     public static void main(String[] args) {
 
@@ -16,7 +21,8 @@ public class Main {
         CustomIterator iterador = books.iterator();
         while (iterador.hasNext()){
             Book book = (Book) iterador.next();
-            System.out.println(book);
+            String bookStr = book.toString();
+            log.debug(bookStr);
         }
 
 

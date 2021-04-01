@@ -14,7 +14,7 @@ class ConcreteSubjectTest {
         Observer bloomberg = new ConcreteObserver("bloomberg");
         assertEquals(0, elon.observers.size());
         elon.addSubscriber(bloomberg);
-        assertTrue(elon.handle == "@elonmusk");
+        assertEquals("@elonmusk",elon.handle);
         assertEquals(1, elon.observers.size());
 
     }
@@ -37,7 +37,7 @@ class ConcreteSubjectTest {
         ConcreteSubject elon = new ConcreteSubject("@elonmusk");
         Observer bloomberg = new ConcreteObserver("bloomberg");
      //   System.out.println(bloomberg.notify(elon.handle, "Test"));
-        assertTrue(elon.handle == bloomberg.notify(elon.handle, "Test"));
+        assertSame(elon.handle, bloomberg.notify(elon.handle, "Test"));
     }
 
 }
