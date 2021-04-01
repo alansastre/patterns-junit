@@ -7,7 +7,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-public class BookShopJUnitTest {
+class BookShopJUnitTest {
 
 
     private BookShop bookShop;
@@ -19,7 +19,7 @@ public class BookShopJUnitTest {
 
     @Test
     @DisplayName("Test name")
-    public void testName() {
+    void testName() {
 
         Book book1 = new Book("1234379873","Darwin",1990);
         Book book2 = new Book("1234379873","Darwin",1990);

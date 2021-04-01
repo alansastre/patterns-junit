@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class ShopCartTest {
+class ShopCartTest {
 
     @BeforeEach
     void setUp() {
@@ -15,7 +15,7 @@ public class ShopCartTest {
 
     @Test
     @DisplayName("addProduct")
-    public void addProduct() {
+    void addProduct() {
 
         Product product = new Product("adlkfjs", 20D);
         ShopCart trolley = new ShopCart();

@@ -5,6 +5,7 @@ import mockito.iterator.iterator1.Book;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 public class BookShop implements Iterable<Book>{
 
@@ -29,14 +30,13 @@ public class BookShop implements Iterable<Book>{
 
         @Override
         public boolean hasNext() {
-            if (this.currentIndex >= books.size()){
-                return false;
-            }
-            return true;
+            return this.currentIndex < books.size();
         }
 
         @Override
-        public Book next() {
+        public Book next() throws NoSuchElementException {
+            if(!hasNext())
+                throw new NoSuchElementException();
             return books.get(currentIndex++);
         }
     }

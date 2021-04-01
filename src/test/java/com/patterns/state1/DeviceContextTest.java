@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 @DisplayName("DeviceContextTest")
-public class DeviceContextTest {
+class DeviceContextTest {
 
 @Test
 @DisplayName("the object type not Null")

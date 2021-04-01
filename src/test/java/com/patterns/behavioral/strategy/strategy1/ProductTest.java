@@ -9,7 +9,7 @@ import java.util.function.DoubleBinaryOperator;
 import static org.junit.jupiter.api.Assertions.*;
 
 @Tag("")
-public class ProductTest {
+class ProductTest {
 
     @Test
     @DisplayName("Check, Product instance created is not null")

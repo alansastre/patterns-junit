@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 @Tag("database")
-public class AdapterTest {
+class AdapterTest {
 
     @Test
     @DisplayName("Comprobar velocidad por defecto 0.0")

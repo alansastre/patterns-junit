@@ -34,7 +34,7 @@ class BookShopTest {
 
     @Test
     @DisplayName("addBook")
-    public void addBook() {
+    void addBook() {
 
         Book bookToAdd = new Book("5656435", "Hawkins", 2021 );
 
@@ -50,7 +50,7 @@ class BookShopTest {
 
     @Test
     @DisplayName("addBookNull")
-    public void addBookNull() {
+    void addBookNull() {
 
 
         int totalBooksBefore = bookShop.getSize();
@@ -109,7 +109,7 @@ class BookShopTest {
 
     @Test
     @DisplayName("iteratorHasNext")
-    public void iteratorHasNext() {
+    void iteratorHasNext() {
 
     Book book1 = new Book("5656435", "Hawkins", 2021 );
 

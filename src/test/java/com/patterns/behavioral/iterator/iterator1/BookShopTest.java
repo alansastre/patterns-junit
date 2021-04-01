@@ -49,7 +49,7 @@ class BookShopTest {
 
     @Test
     @DisplayName("iteratorHasNext")
-    public void iteratorHasNext() {
+    void iteratorHasNext() {
 
         Book book1 = new Book("5656435", "Hawkins", 2021 );
 
@@ -67,7 +67,7 @@ class BookShopTest {
 
     @Test
     @DisplayName("iteratorNotHasNext")
-    public void iteratorNotHasNext() {
+    void iteratorNotHasNext() {
 
         BookShop books = new BookShop();
 
@@ -79,7 +79,7 @@ class BookShopTest {
 
     @Test
     @DisplayName("getNext")
-    public void getNext() {
+    void getNext() {
 
         Book book1 = new Book("5656435", "Hawkins", 2021 );
 
@@ -96,7 +96,7 @@ class BookShopTest {
 
     @Test
     @DisplayName("noGetNext")
-    public void noGetNext() {
+    void noGetNext() {
 
         BookShop books = new BookShop();
 

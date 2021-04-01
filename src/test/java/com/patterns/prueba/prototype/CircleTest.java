@@ -6,7 +6,7 @@ import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 @DisplayName("Test Circle")
-public class CircleTest {
+class CircleTest {
 
 
     @Test

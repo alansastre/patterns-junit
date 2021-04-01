@@ -12,7 +12,7 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 @ExtendWith(MockitoExtension.class)
-public class State1Test {
+class State1Test {
 
 
     @Mock
@@ -21,37 +21,37 @@ public class State1Test {
 
     @Test
     @DisplayName("testDeviceContext")
-    public void testDeviceContext() {
+    void testDeviceContext() {
     deviceContext = new DeviceContext();
     assertNotNull(deviceContext);
     }
     @Test
     @DisplayName("testDeviceisTestDeviceContext")
-    public void testDeviceisTestDeviceContext() {
+    void testDeviceisTestDeviceContext() {
         deviceContext = new DeviceContext();
         assertTrue(deviceContext instanceof DeviceContext);
     }
     @Test
     @DisplayName("start not null")
-    public void startNotNull() {
+    void startNotNull() {
         OnState on = new OnState();
         assertNotNull(on);
     }
     @Test
     @DisplayName("stop not null")
-    public void stopNotNull() {
+    void stopNotNull() {
         OffState off = new OffState();
         assertNotNull(off);
     }
     @Test
     @DisplayName("offIsOFF")
-    public void offIsOFF() {
+    void offIsOFF() {
         OffState off = new OffState();
         assertTrue(off instanceof OffState);
     }
     @Test
     @DisplayName("onIsOn")
-    public void onIsOn() {
+    void onIsOn() {
         OnState on = new OnState();
         assertTrue(on instanceof OnState);
     }
