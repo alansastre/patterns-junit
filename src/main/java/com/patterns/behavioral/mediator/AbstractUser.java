@@ -15,5 +15,21 @@ public abstract class AbstractUser {
 
     public abstract void receive(String message);
 
+    public ChatMediator getMediator() {
+        return mediator;
+    }
 
+    public AbstractUser setMediator(ChatMediator mediator) {
+        this.mediator = mediator;
+        return this;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public AbstractUser setName(String name) {
+        this.name = name;
+        return this;
+    }
 }
