@@ -1,8 +1,13 @@
 package com.patterns.solid;
 
 import com.patterns.errors.InvalidCarException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class Main {
+
+    // Define the logger object for this class
+    private static final Logger log = LoggerFactory.getLogger(Main.class);
 
     public static void main(String[] args) {
 
@@ -21,7 +26,7 @@ public class Main {
             car.accelerate();
 
         } catch (InvalidCarException e) {
-            e.printStackTrace();
+            log.error("Error: ", e);
         }
 
 
