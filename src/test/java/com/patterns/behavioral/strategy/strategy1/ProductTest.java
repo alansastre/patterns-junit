@@ -4,8 +4,6 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
-import java.util.function.DoubleBinaryOperator;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 @Tag("")
@@ -19,4 +17,14 @@ class ProductTest {
     }
 
 
+    static class PaypalStrategyTest {
+
+        @Test
+        @DisplayName("Check paypal instanceof PaymenyStrategy")
+        void test1(){
+            PaymentStrategy usePaypal = new PaypalStrategy("API paypal","shenshin@gmail.com","1276x1");
+            assertTrue(usePaypal instanceof PaymentStrategy);
+        }
+
+    }
 }
