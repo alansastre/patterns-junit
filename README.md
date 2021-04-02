@@ -44,3 +44,9 @@ Leen la etiqueta resources del pom.xml
 ## Maven surefire plugin
 
 mvn surefire:test
+
+---
+```
+verify sonar:sonar -Dsonar.projectKey=scarrasco85_patterns-junit -Dsonar.organization=scarrasco85 -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=42c09b8eb12a660ce847be12ac3dba1885f253ad -Dsonar.branch.name=develop
+```
+---
